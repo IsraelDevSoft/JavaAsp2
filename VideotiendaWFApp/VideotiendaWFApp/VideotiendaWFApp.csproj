@@ -61,18 +61,56 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\alquiler.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\alq_videojuegos.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\categorias.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cat_videojuegos.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dominios.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ModelVideotienda.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelVideotienda.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelVideotienda.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelVideotienda.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelVideotienda.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\personas.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\productores.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\videojuegos.cs">
+      <DependentUpon>ModelVideotienda.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FrmDominios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmDominios.Designer.cs">
+      <DependentUpon>FrmDominios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,6 +120,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\FrmDominios.resx">
+      <DependentUpon>FrmDominios.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Models\ModelVideotienda.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelVideotienda.Designer.cs</LastGenOutput>
@@ -107,13 +148,17 @@
     <Content Include="Models\ModelVideotienda.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelVideotienda.Context.cs</LastGenOutput>
+      <DependentUpon>ModelVideotienda.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModelVideotienda.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelVideotienda.edmx</DependentUpon>
+      <LastGenOutput>ModelVideotienda.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
