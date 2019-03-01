@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.grdDominios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -57,36 +57,36 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.grdDominios);
-            this.splitContainer1.Size = new System.Drawing.Size(571, 341);
-            this.splitContainer1.SplitterDistance = 73;
+            this.splitContainer1.Size = new System.Drawing.Size(491, 373);
+            this.splitContainer1.SplitterDistance = 55;
             this.splitContainer1.TabIndex = 0;
             // 
-            // btnNuevo
+            // btnEliminar
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(43, 24);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(349, 8);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(78, 37);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(243, 24);
+            this.btnEditar.Location = new System.Drawing.Point(198, 8);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(82, 37);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // btnEliminar
+            // btnNuevo
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(423, 23);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(40, 8);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 37);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // grdDominios
             // 
@@ -94,17 +94,18 @@
             this.grdDominios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDominios.Location = new System.Drawing.Point(0, 0);
             this.grdDominios.Name = "grdDominios";
-            this.grdDominios.Size = new System.Drawing.Size(571, 264);
+            this.grdDominios.Size = new System.Drawing.Size(491, 314);
             this.grdDominios.TabIndex = 0;
             // 
             // FrmDominios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 341);
+            this.ClientSize = new System.Drawing.Size(491, 373);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmDominios";
-            this.Text = "Administrar Dominios";
+            this.Text = "Gestor de dominios";
+            this.Load += new System.EventHandler(this.FrmDominios_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
