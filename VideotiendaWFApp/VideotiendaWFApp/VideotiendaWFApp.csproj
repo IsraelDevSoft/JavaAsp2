@@ -108,6 +108,12 @@
     <Compile Include="Views\FrmDominios.Designer.cs">
       <DependentUpon>FrmDominios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmGestionarDominios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmGestionarDominios.Designer.cs">
+      <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Views\FrmDominios.resx">
       <DependentUpon>FrmDominios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmGestionarDominios.resx">
+      <DependentUpon>FrmGestionarDominios.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models\ModelVideotienda.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
