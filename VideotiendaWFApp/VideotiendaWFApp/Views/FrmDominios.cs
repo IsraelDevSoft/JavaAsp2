@@ -29,12 +29,27 @@ namespace VideotiendaWFApp.Views
 
         public void refrescarTabla()
         {
-            using(videotiendaEntities db = new videotiendaEntities())
+            using (videotiendaEntities db = new videotiendaEntities())
             {
                 var lstDominios = from d in db.dominios
                                   select d;
                 grdDatos.DataSource = lstDominios.ToList();
 
+            }
+
+
+        }
+
+        private dominios getSelectedItem()
+        {
+            dominios d = new dominios();
+            try
+            {
+                d.TIPO_DOMINIO = grdDatos.Rows[grdDatos.CurrentRow.Index].Cells[0].Value.ToString();
+                d.ID_DOMINIO = grdDatos.Rows[grdDatos.CurrentRow.Index].Cells[1].Value.ToString();
+                return d;
+            }catch{
+                 return null;
             }
         }
         #endregion
@@ -76,6 +91,48 @@ namespace VideotiendaWFApp.Views
         {
             Views.FrmGestionarDominios frmGestionarDominios = new Views.FrmGestionarDominios(null, null);
             frmGestionarDominios.ShowDialog();
+
+            refrescarTabla();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //obtener dominio que se selecciono
+            dominios d = getSelectedItem();
+            if(d != null)
+            {
+                Views.FrmGestionarDominios frmGestionarDominios = 
+                    new Views.FrmGestionarDominios(d.TIPO_DOMINIO, d.ID_DOMINIO);
+                frmGestionarDominios.ShowDialog();
+                refrescarTabla();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //obtener el dominio que se va eleminar 
+            dominios d = this.getSelectedItem();
+            //hubo seleccion
+            if (d != null)
+            {
+                if (MessageBox.Show("Esta seguro que desea eliminar este registro?", "Confimacion",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    //establecer conexion con la BD a traves de EF
+                    using (videotiendaEntities db = new videotiendaEntities())
+                    {
+                        //buscar el dominio en la BD
+                        dominios dEliminar = db.dominios.Find(d.TIPO_DOMINIO, d.ID_DOMINIO);
+                        //eliminar el dominio de la tabla
+                        db.dominios.Remove(dEliminar);
+                        //confirmar cambios en la BD
+                        db.SaveChanges();
+                    }
+                    //actualizar la tabla de datos
+                    this.refrescarTabla();
+                }
+            }
         }
     }
 }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
-            this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.txtTipo = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.gbxDatos = new System.Windows.Forms.GroupBox();
             this.grdDatos = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -67,6 +67,74 @@
             this.gbxFiltro.TabStop = false;
             this.gbxFiltro.Text = "Filtro de busqueda";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(485, 77);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
+            this.btnLimpiar.TabIndex = 7;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(356, 77);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(115, 79);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(200, 21);
+            this.txtValor.TabIndex = 5;
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(10, 79);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(98, 15);
+            this.lblValor.TabIndex = 4;
+            this.lblValor.Text = "Valor Dominio";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(410, 35);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(200, 21);
+            this.txtId.TabIndex = 3;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(327, 38);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(77, 15);
+            this.lblId.TabIndex = 2;
+            this.lblId.Text = "Id Dominio";
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Location = new System.Drawing.Point(106, 35);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(200, 21);
+            this.txtTipo.TabIndex = 1;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(7, 35);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(93, 15);
+            this.lblTipo.TabIndex = 0;
+            this.lblTipo.Text = "Tipo Dominio";
+            // 
             // gbxDatos
             // 
             this.gbxDatos.Controls.Add(this.grdDatos);
@@ -79,74 +147,6 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Dominios";
             // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(7, 35);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(93, 15);
-            this.lblTipo.TabIndex = 0;
-            this.lblTipo.Text = "Tipo Dominio";
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(106, 35);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(200, 21);
-            this.txtTipo.TabIndex = 1;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(327, 38);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(77, 15);
-            this.lblId.TabIndex = 2;
-            this.lblId.Text = "Id Dominio";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(410, 35);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(200, 21);
-            this.txtId.TabIndex = 3;
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(10, 79);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(98, 15);
-            this.lblValor.TabIndex = 4;
-            this.lblValor.Text = "Valor Dominio";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(115, 79);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(200, 21);
-            this.txtValor.TabIndex = 5;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(356, 77);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(485, 77);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
-            this.btnLimpiar.TabIndex = 7;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // grdDatos
             // 
             this.grdDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -154,6 +154,7 @@
             this.grdDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDatos.Location = new System.Drawing.Point(3, 17);
             this.grdDatos.Name = "grdDatos";
+            this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDatos.Size = new System.Drawing.Size(627, 195);
             this.grdDatos.TabIndex = 0;
             // 
@@ -187,6 +188,7 @@
             this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -197,6 +199,7 @@
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // FrmDominios
             // 
